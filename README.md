@@ -1,6 +1,6 @@
 # Dice Roll 😑🎲
 
-Dice roll is built with HTML, CSS & vanilla JS
+Dice roll is built with HTML, CSS & vanilla JS, Data from [Bored-API] (https://github.com/drewthoennes/Bored-API) and Design from [dice-game] (https://github.com/iscasur/dice-game)
 
 ![Dice roll](dice-roll.png)
 
