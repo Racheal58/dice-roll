@@ -1,0 +1,159 @@
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  /* background: linear-gradient(#ff1493, #ff88ee) 0 100% no-repeat; */
+
+  background: linear-gradient(
+      90deg,
+      #ff88ee,
+      #ff7ce3,
+      #ff70d7,
+      #ff62ca,
+      #ff54bd,
+      #ff44af,
+      #ff31a1,
+      #ff1493
+    )
+    0 100% no-repeat;
+  background-size: 100% 50%;
+}
+
+/* 
+when you push credit the main guy
+https://dice-react.netlify.app/
+https://github.com/iscasur/dice-game
+*/
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 15px 35px rgba(50, 50, 50, 0.2);
+  width: 380px;
+  margin: auto;
+  height: 520px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+h3 {
+  text-align: center;
+  color: #161927;
+  font-weight: 600;
+}
+
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.dice {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  align-items: center;
+  justify-items: center;
+  border-radius: 10px;
+  border: 2px solid deeppink;
+}
+
+.dice-dot {
+  --grid-column: 0;
+  --grid-row: 0;
+
+  background-color: deeppink;
+  grid-column: var(--grid-column);
+  grid-row: var(--grid-row);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.button-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-roll-dice {
+  background-color: deeppink;
+  color: white;
+  padding: 16px 0;
+  border: none;
+  width: 128px;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.btn-reset {
+  background-color: transparent;
+  color: deeppink;
+  margin-top: 10px;
+}
+
+.err-msg {
+  margin: 0;
+  color: red;
+  font-size: larger;
+}
+
+#activity-container {
+  list-style: none;
+  text-align: center;
+  color: #161927;
+  margin: 0;
+  padding: 0;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+#activity-container li {
+  padding: 15px 0;
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#activity-container li:not(:last-of-type) {
+  border-bottom: 1px solid #161927;
+}
+
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid deeppink;
+  border-radius: 100%;
+  margin: auto;
+  display: none;
+  animation: spin 1s infinite linear;
+}
+
+#loading.display {
+  display: block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
